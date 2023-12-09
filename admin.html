@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>admin</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="w-75 mx-auto py-4">
+             <h3 class="py-4">Product Manegment System</h3>
+             <label class="py-3 fs-4" for="productNameInput">productName: </label>
+            <input oninput="validateProductName()" type="text"  id="productNameInput" class="form-control">
+            <label class="py-3 fs-4" for="productPriceInput">productPrice: </label>
+            <input type="number"  id="productPriceInput" class="form-control">
+            <label class="py-3 fs-4" for="productCategoryInput">productCategory: </label>
+            <input type="text"  id="productCategoryInput" class="form-control">
+
+            <button id="addbtn" onclick="addProduct()" class="btn btn-danger my-3"> Add Product</button>
+            <button id="updatabtn" onclick="updateProduct()" class="btn btn-primary d-none my-3"> Update Product</button>
+    </div>
+    <div class="w-75 mx-auto ">
+        <label class="p-3 fs-4" for="search">Search</label>
+        <input oninput="searchProducts(this.value)" type="text" class="form-control" placeholder="search by name" id="search" >
+    </div>
+    <table class="table w-75 mx-auto">
+        <thead>
+            <tr>
+            <th>Id</th>
+            <th>productName</th>
+            <th>productPrice</th>
+            <th>productCategory</th>
+            <th>Update</th>
+            <th>Delete</th>
+        </tr>
+        </thead>
+        <tbody id="tbodyTable">
+          
+        </tbody>
+    </table>
+<script src="js/script.js"></script>    
+</body> 
+</html>
